@@ -1,5 +1,10 @@
 import { extendTheme } from "@chakra-ui/react";
 
+const config = {
+	initialColorMode: "light",
+	useSystemColorMode: false,
+};
+
 const sans = [
 	"Merriweather",
 	"-apple-system",
@@ -28,6 +33,7 @@ const theme = extendTheme({
 		heading: sans,
 		mono,
 	},
+	config,
 });
 
 export default theme;

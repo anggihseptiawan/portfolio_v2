@@ -8,13 +8,20 @@ import {
 	MenuButton,
 	MenuList,
 	MenuItem,
+	useColorMode,
 } from "@chakra-ui/react";
 import Link from "next/link";
-import { FaMoon, FaSun } from "react-icons/fa";
+import { FiMoon, FiSun } from "react-icons/fi";
 import { useState } from "react";
 
 export const Navbar = () => {
 	const [dark, setDark] = useState<Boolean>(false);
+	const { colorMode, toggleColorMode } = useColorMode();
+
+	const handleColorMode = () => {
+		setDark(!dark);
+		toggleColorMode();
+	};
 
 	return (
 		<Container as={Stack} maxW="7xl" py={4} spacing={4}>
@@ -43,8 +50,8 @@ export const Navbar = () => {
 					</Box>
 				</HStack>
 				<HStack>
-					<Button onClick={() => setDark(!dark)}>
-						{dark ? <FaSun /> : <FaMoon />}
+					<Button onClick={handleColorMode}>
+						{dark ? <FiSun /> : <FiMoon />}
 					</Button>
 					<Menu>
 						<MenuButton as={Button}>ID</MenuButton>
