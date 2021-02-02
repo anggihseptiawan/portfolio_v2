@@ -14,12 +14,11 @@ class MyDocument extends Document {
 						httpEquiv="Content-Type"
 						content="text/html;charset=UTF-8"
 					/>
-					<meta name="author" contant="Anggih Septiawan" />
+					<meta name="author" content="Anggih Septiawan" />
 					<meta
 						name="description"
 						content="Anggih Septiawan's portfolio"
 					/>
-					<title>Anggih Septiawan's Portfolio</title>
 
 					<link rel="preconnect" href="https://fonts.gstatic.com" />
 					<link

@@ -14,7 +14,7 @@ import { FaMoon, FaSun } from "react-icons/fa";
 import { useState } from "react";
 
 export const Navbar = () => {
-	const [dark, setDark] = useState(false);
+	const [dark, setDark] = useState<Boolean>(false);
 
 	return (
 		<Container as={Stack} maxW="7xl" py={4} spacing={4}>
