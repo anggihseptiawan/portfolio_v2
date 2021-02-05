@@ -32,9 +32,9 @@ function MyApp({ Component, pageProps }: AppProps) {
 						flexGrow={1}
 						initial="initial"
 						variants={{
-							initial: { opacity: 0, y: 80 },
+							initial: { opacity: 0, y: -40 },
 							enter: { opacity: 1, y: 0 },
-							exit: { opacity: 0, y: -80 },
+							exit: { opacity: 0, y: 40 },
 						}}
 					>
 						<Component {...pageProps} />
