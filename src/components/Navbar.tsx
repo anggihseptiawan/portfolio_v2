@@ -16,6 +16,7 @@ import { useState } from "react";
 
 export const Navbar = () => {
 	const [dark, setDark] = useState<Boolean>(false);
+	const [lang, setLang] = useState<String>('ID');
 	const { colorMode, toggleColorMode } = useColorMode();
 
 	const handleColorMode = () => {
@@ -54,10 +55,10 @@ export const Navbar = () => {
 						{dark ? <FiSun /> : <FiMoon />}
 					</Button>
 					<Menu>
-						<MenuButton as={Button}>ID</MenuButton>
+						<MenuButton as={Button}>{lang}</MenuButton>
 						<MenuList>
-							<MenuItem>INDONESIA</MenuItem>
-							<MenuItem>ENGLISH</MenuItem>
+							<MenuItem onClick={() => setLang('ID')}>INDONESIA</MenuItem>
+							<MenuItem onClick={() => setLang('EN')}>ENGLISH</MenuItem>
 						</MenuList>
 					</Menu>
 				</HStack>
