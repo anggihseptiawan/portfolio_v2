@@ -3,7 +3,7 @@ import { Container, Box, Heading, Text } from "@chakra-ui/react";
 export default function Home() {
 	return (
 		<Container maxW="7xl" fontWeight={500}>
-			<Box className="hero" mt={20}>
+			<Box className="hero" mt={20} style={{ height: "75vh" }}>
 				<Heading as="h1" size="4xl">
 					A STUDENT
 				</Heading>
